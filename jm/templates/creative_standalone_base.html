@@ -1,0 +1,105 @@
+{% load cms_tags menu_tags sekizai_tags static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <!-- Author -->
+    <meta name="author" content="Themes Industry" />
+    <!-- description -->
+    <meta
+      name="description"
+      content="Creative Startup is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose studio and portfolio HTML5 template with 8 ready home page demos."
+    />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="Creative Startup, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, studio, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, studio, masonry, grid, faq"
+    />
+    <!-- Page Title -->
+    <title>{% block title %}31 July Movement{% endblock title %}</title>
+    {% include 'creative_head.html' %} {% render_block "css" %}
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    {% cms_toolbar %}
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="center">
+        <div class="loader loader-32">
+          <div class="loader-container">
+            <div class="ball-wrapper">
+              <div class="ball-holder">
+                <div class="ball"></div>
+              </div>
+              <div class="shadow"></div>
+            </div>
+            <div class="ball-wrapper">
+              <div class="ball-holder">
+                <div class="ball"></div>
+              </div>
+              <div class="shadow"></div>
+            </div>
+            <div class="ball-wrapper">
+              <div class="ball-holder">
+                <div class="ball"></div>
+              </div>
+              <div class="shadow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!--Header Start-->
+    {% include 'creative_upper_blog.html' %}
+    <!--Header End-->
+
+    <!--portfolio section start-->
+    <section
+      class="portfolio-sec company-portfolio-section padding-top"
+      id="company-portfolio-section"
+    >
+      <!--main page content-->
+      <section class="main" id="main">
+        <!--content-->
+        <div class="blog-content padding-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                <div class="main_content text-center text-lg-left">
+                  <div class="row">
+                    {% block content %} {% placeholder "content" %} {% endblock content %}
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="cat_sec">
+                        {% placeholder 'archives' %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--main page content end-->
+    </section>
+    <!--portfolio section end-->
+
+    <!--Footer Start-->
+    {% include 'creative_footer.html' %}
+    <!--Footer End-->
+
+    {% include 'creative_scripts.html' %} {% render_block "js" %}
+  </body>
+</html>

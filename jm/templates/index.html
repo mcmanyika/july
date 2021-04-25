@@ -1,0 +1,97 @@
+{% load cms_tags menu_tags sekizai_tags static %}
+    
+
+    <!-- Header Bottom Links
+	================================================== -->
+  
+    <div class="container">
+      <div class="header-text">
+          <div class="col-xs-9 col-xs-offset-3" style="text-align:center">
+            {% placeholder 'banner_text' %}
+          </div>
+      </div>
+    </div>     
+     <div class="header-links">
+        <div class="container">
+          <div class="header-links-wrapper">
+            <div class="col-md-4  col-xs-6 no-padding">
+              <!-- Modify style with color classes: 'accent', 'solid-accent', 'solid-primary' (default: no extra class) -->
+              <div
+                class="header-links-item solid-accent"
+                style="background-image: none;"
+              >
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8PBQNHAMGJL98&source=url">
+                  <article>
+                    <h3 class="entry-title">
+                      <span>Contribute</span>
+                    </h3>
+                  </article>
+                  <div class="overlay"></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-6 no-padding">
+              <div
+                class="header-links-item"
+                style="
+                  background-image: url('static/assets/images/header-bottom-volunteer.png');
+                "
+              >
+                <a href="#register">
+                  <article>
+                    <h3 class="entry-title">
+                      <i class="fa fa-check-square-o"></i>
+                      <span>Become A Member</span>
+                    </h3>
+                  </article>
+                  <div class="overlay"></div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="col-md-4 col-xs-6 no-padding">
+              <div
+                class="header-links-item"
+              >
+                <a href="/news/">
+                  <article>
+                    <h3 class="entry-title">
+                      <i class="fa fa-newspaper-o"></i>
+                      <span>Latest Articles</span>
+                    </h3>
+                  </article>
+                  <div class="overlay"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- end header-links-wrapper -->
+        </div>
+        <!-- end container -->
+
+        
+      
+  
+ <div id="section-videos" class="wrapper video-list">
+    <div class="container">
+      <div style="padding:50px; text-align: center;">
+        {% placeholder 'welcome' %}
+      </div>
+    </div>
+  </div>
+  
+<div id="register" class="action">
+  {% placeholder 'register' %}
+</div>
+<div class="jumbotron">
+  {% placeholder 'pillars' %}
+</div>
+ <div class="col-md-12">
+  {% placeholder 'video' %}
+</div> 
+    
+<div id="footer" class="col-md-12 footer">
+      {% placeholder 'footer' %}
+</div>
+  
+  
