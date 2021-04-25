@@ -27,8 +27,11 @@ SECRET_KEY = '=!hb5zko_39=1(&24az&9e@x^_t-0$%o=gcv(y40yhvbx-4w#m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+if DEBUG:
+    ALLOWED_HOSTS = ['127.0.0.1',
+                     'www.31julymovement.com', '31julymovement.com']
+else:
+    ALLOWED_HOSTS = ['www.31julymovement.com', '31julymovement.com']
 
 
 # Application definition
@@ -225,17 +228,29 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
-DATABASES = {
-    'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': 'project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'CONN_MAX_AGE': 0,
+            'ENGINE': 'django.db.backends.sqlite3',
+            'HOST': 'localhost',
+            'NAME': 'project.db',
+            'PASSWORD': '',
+            'PORT': '',
+            'USER': ''
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'bigboy',
+            'USER': 'db_admin',
+            'PASSWORD': 'focus@1',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
